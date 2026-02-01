@@ -286,10 +286,32 @@
     }
 
     @media (max-width:520px){
+      body{ overflow:auto; }
+      .wrap{ padding: 16px; }
       .card{ padding: 18px; }
-      .avatar{ width: 100%; height: 240px; }
-      button{ width: 100%; }
+      .top{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .badge{ justify-content:center; }
+      .names{ justify-content:center; }
+      header{ text-align:center; }
+      .avatar{
+        width: 100%;
+        max-width: 320px;
+        height: 220px;
+      }
+      .subtitle{
+        max-width: 34ch;
+        margin: 0 auto;
+      }
       .buttons{ gap: 10px; }
+      button{ width: 100%; }
+      .footer{
+        justify-content:center;
+        text-align:center;
+      }
     }
   </style>
 </head>
