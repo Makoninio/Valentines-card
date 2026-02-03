@@ -159,11 +159,19 @@
       box-shadow: 0 14px 30px rgba(0,0,0,.10);
       margin: 14px auto 6px;
     }
-    .avatar img{
+    .avatar-placeholder{
       width:100%;
       height:100%;
-      object-fit:cover;
-      display:block;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      font-weight:700;
+      color: var(--muted);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,77,125,.12), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(255,179,199,.18), transparent 40%),
+        linear-gradient(135deg, #fff3f7, #ffe3ec);
     }
 
     .ask{
@@ -338,16 +346,18 @@
         </div>
 
         <div class="names">
-          <span class="pill" id="yourName">Tanaka</span>
+          <span class="pill" id="yourName">Your Name</span>
           <span class="heart">❤</span>
-          <span class="pill" id="theirName">Theryn</span>
+          <span class="pill" id="theirName">Their Name</span>
         </div>
 
         <header>
           <h1 id="headline">Will you be my Valentine?</h1>
 
           <div class="avatar">
-            <img src="pic.jpeg" alt="Us" />
+            <div class="avatar-placeholder" aria-label="Your photo placeholder">
+              Your Photo
+            </div>
           </div>
 
           <p class="subtitle" id="subtitle">
@@ -368,7 +378,7 @@
 
         <div class="footer">
           <span>Made with love.</span>
-          <span id="signature">From: Tanaka</span>
+          <span id="signature">From: Your Name</span>
         </div>
 
         <div class="toast" id="toast" role="status" aria-live="polite">
@@ -384,11 +394,11 @@
 
   <script>
     const CONFIG = {
-      yourName: "Tanaka",
-      theirName: "Theryn",
+      yourName: "Your Name",
+      theirName: "Their Name",
       subtitle:
         "I made you this because you make my days brighter, my laughs louder, and my heart very happy",
-      signature: "From: Tanaka",
+      signature: "From: Your Name",
       yesMessageTitle: "SHE SAID YES!!!",
       yesMessageBody: "Okay now you are officially stuck with me. Happy Valentine’s Day 😌",
       noMessages: [
